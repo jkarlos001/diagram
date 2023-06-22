@@ -14,7 +14,7 @@
 
         {{-- @can('cliente.suscripcion') --}}
         <li class="w-full mt-4">
-            <h6 class="pl-6 ml-2 font-bold leading-tight uppercase text-xs opacity-100">2do Parcial</h6>
+            <h6 class="pl-6 ml-2 font-bold leading-tight uppercase text-xs opacity-100">Menú</h6>
         </li>
 
 
