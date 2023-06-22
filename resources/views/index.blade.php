@@ -315,7 +315,7 @@
                             <ul class="relative flex flex-wrap p-1 list-none bg-transparent rounded-xl" nav-pills
                                 role="tablist">
 
-                                <li class="z-30 flex-auto text-center">
+                                {{--<li class="z-30 flex-auto text-center">
                                     <a class="block w-full px-0 py-1 mb-0 transition-all border-0 rounded-lg ease-soft-in-out bg-inherit text-slate-700 {{ request()->routeIs('novedades') ? 'text-black font-bold' : '' }}"
                                         href="{{ route('novedades') }}" role="tab"
                                         aria-selected="{{ request()->routeIs('novedades') ? 'true' : 'false' }}">
@@ -342,7 +342,7 @@
                                         aria-selected="{{ request()->routeIs('cart.show') ? 'true' : 'false' }}">
                                         <span class="ml-1">Carrito</span>
                                     </a>
-                                </li>
+                                </li>--}}
 
                             </ul>
                         </div>

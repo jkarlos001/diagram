@@ -37,7 +37,7 @@
                     <div class="relative right-0">
                         <ul class="relative flex flex-wrap p-1 list-none bg-transparent rounded-xl" nav-pills
                             role="tablist">
-                            <li class="z-30 flex-auto text-center">
+                            {{--<li class="z-30 flex-auto text-center">
                                 <a class="block w-full px-0 py-1 mb-0 transition-all border-0 rounded-lg ease-soft-in-out bg-inherit text-slate-700"
                                     nav-link href="#" role="tab" aria-selected="true">
 
@@ -55,7 +55,7 @@
                                     nav-link href="#" role="tab" aria-selected="false">
                                     <span class="ml-1">Invitaciones</span>
                                 </a>
-                            </li>
+                            </li>--}}
                         </ul>
                     </div>
                 </div>
