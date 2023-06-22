@@ -77,7 +77,7 @@
                         class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-blue-900"
                         wire:target="nuevaSuscripcion('Organizador','price_1N5anoEeOK3PttV3Yjhi0D21')"
                         wire:loading.attr="disabled">
-                        {{-- spiner load by Julico --}}
+                        {{-- spiner load by --}}
                         <div class="loader"
                             wire:target="nuevaSuscripcion('Organizador','price_1N5anoEeOK3PttV3Yjhi0D21')" wire:loading>
                         </div>
@@ -152,7 +152,7 @@
                         wire:target="nuevaSuscripcion('Foto estudio','price_1N5bPaEeOK3PttV3ufJXgphL')"
                         wire:loading.attr="disabled">
 
-                        {{-- spiner load by Julico --}}
+                        {{-- spiner load by --}}
                         <div class="loader"
                             wire:target="nuevaSuscripcion('Foto estudio','price_1N5bPaEeOK3PttV3ufJXgphL')"
                             wire:loading>

@@ -12,7 +12,7 @@ use Stripe\Customer;
 use App\Models\Evento;
 use App\Models\planes;
 
-//libreria de roles by Julico
+//libreria de roles
 use App\Models\cliente;
 use App\Models\organizador;
 use App\Models\album_evento;
@@ -146,8 +146,7 @@ class DatabaseSeeder extends Seeder
 
 
         $images = [
-            public_path('img/fotosClientes/JCST.png'),
-            // public_path('img/fotosClientes/Julico.jpg'),
+            public_path('img/fotosClientes/default.png'),
             public_path('img/fotosClientes/organizador1.jpg'),
             // public_path('img/fotosClientes/organizador2.jpeg'),
             public_path('img/fotosClientes/fotoestudio1.jpeg'),
@@ -158,8 +157,7 @@ class DatabaseSeeder extends Seeder
 
 
         $portadas = [
-            // public_path('img/fotosClientes/JCST.png'),
-            public_path('img/fotosClientes/Julico.jpg'),
+            public_path('img/fotosClientes/fotoestudio1.jpeg'),
             // public_path('img/fotosClientes/organizador1.jpg'),
             public_path('img/fotosClientes/organizador2.jpeg'),
             // public_path('img/fotosClientes/fotoestudio1.jpg'),
@@ -182,20 +180,19 @@ class DatabaseSeeder extends Seeder
 
         $users = [
             [
-                'name' => 'Julio',
-                'email' => 'julio@correo.com',
-                'fecha_nacimiento' => '1991-02-16',
+                'name' => 'Juan',
+                'email' => 'underbolivia@gmail.com',
+                'fecha_nacimiento' => '1994-05-07',
                 'genero' => 'M',
                 // 'password' => 'password',
                 // 'profile_photo_path' => $imagen_url,
-                // 'portada_photo_path' => 'Julico.jpg',
                 'estado' => 0,
                 'role' => 'dev',
             ],
             [
-                'name' => 'Organizador',
+                'name' => 'Steve',
                 'email' => 'organizador@correo.com',
-                'fecha_nacimiento' => '1991-02-16',
+                'fecha_nacimiento' => '1990-01-20',
                 'genero' => 'M',
                 // 'password' => 'password',
                 // 'profile_photo_path' => 'organizador1.jpg',
@@ -204,26 +201,26 @@ class DatabaseSeeder extends Seeder
                 'role' => 'organizador',
             ],
             [
-                'name' => 'Foto Estudio',
-                'email' => 'fotoestudio@correo.com',
-                'fecha_nacimiento' => '1991-02-16',
+                'name' => 'Sergio',
+                'email' => 'sergio@appscore.ml',
+                'fecha_nacimiento' => '2000-04-19',
                 'genero' => 'M',
                 // 'password' => 'password',
                 // 'profile_photo_path' => 'fotoestudio1.jpeg',
                 // 'portada_photo_path' => 'fotoestudio2.jpg',
                 'estado' => 1,
-                'role' => 'fotoestudio',
+                'role' => 'dev',
             ],
             [
-                'name' => 'Foto Estudio 2',
-                'email' => 'fotoestudio2@correo.com',
-                'fecha_nacimiento' => '1991-02-16',
+                'name' => 'Mauricio',
+                'email' => 'mauricio@appscore.ml',
+                'fecha_nacimiento' => '1998-09-06',
                 'genero' => 'M',
                 // 'password' => 'password',
                 // 'profile_photo_path' => 'fotoestudio3.jpeg',
                 // 'portada_photo_path' => 'fotoestudio4.jpg',
                 'estado' => 0,
-                'role' => 'fotoestudio',
+                'role' => 'dev',
             ],
         ];
 
@@ -270,8 +267,8 @@ class DatabaseSeeder extends Seeder
                 $user->fecha_nacimiento = $users[$i]['fecha_nacimiento'];
                 $user->genero = $users[$i]['genero'];
                 $user->password = bcrypt('password');
-                $user->profile_photo_path = 'img/JCST.png';
-                $user->portada_photo_path = 'img/JCST.png.png';
+                $user->profile_photo_path = 'img/default.png';
+                $user->portada_photo_path = 'img/default.png';
                 // $user->profile_photo_path = $imageUrl;
                 // $user->portada_photo_path = $portada_s3;
                 $user->assignRole($users[$i]['role']);
@@ -295,8 +292,8 @@ class DatabaseSeeder extends Seeder
     public function cargarEvento()
     {
         $e = new Evento();
-        $e->evento_name = 'Bodas de Cristal Mary&Julio';
-        $e->descripcion = 'Acompaña a Mary & Julio en la celebracion de su aniversario de bodas de cristal';
+        $e->evento_name = 'Bodas de Cristal';
+        $e->descripcion = 'Acompaña en la celebracion de su aniversario de bodas de cristal';
         $e->fecha = '2023-07-22';
         $e->hora = '20:30';
         $e->horafin = '23:59';
@@ -307,8 +304,8 @@ class DatabaseSeeder extends Seeder
         $e->id_fotoestudio = 3;
         $e->save();
         $a = new album_evento();
-        $a->nombre_album = 'Bodas de Cristal Mary&Julio';
-        $a->descripcion = 'Acompaña a Mary & Julio en la celebracion de su aniversario de bodas de cristal';
+        $a->nombre_album = 'Bodas de Cristal';
+        $a->descripcion = 'Acompaña en la celebracion de su aniversario de bodas de cristal';
         $a->portada = 'invitacion.png';
         $a->estado = 0;
         $a->id_evento = $e->id;
@@ -362,7 +359,7 @@ class DatabaseSeeder extends Seeder
             $imageName = uniqid() . '.png';
 
             $perfil_s3 = $s3->putObject([
-                'Bucket' => 'julico-bucket03',
+                'Bucket' => 'j-bucket03',
                 'Key' => 'ruta/' . $imageName,
                 'Body' => fopen($perfiles, 'r'),
                 'ACL' => 'public-read',

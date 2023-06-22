@@ -61,7 +61,7 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
-    <title>Julico Suarez</title>
+    <title>Diagrama</title>
 </head>
 
 <body>
@@ -84,7 +84,7 @@
                 <h2 class="text-2xl font-bold mb-4 border-b-2">Agregar Atributo</h2>
                 <div id="atributos" class="">
                     <div class="mb-4">
-                        {{-- datos para mi js by Julico --}}
+                        {{-- datos para mi js --}}
                         <input type="text" name="id_diagrama" id="id_diagrama" value="{{ $d->id }}"
                             class="hidden">
                         <input type="text" name="clases" id="clases" value="{{ $clases }}" class="hidden">

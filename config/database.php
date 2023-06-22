@@ -63,7 +63,7 @@ return [
             ]) : [],
         ],
 
-        // firebase google by Julico
+        // firebase google
 
         'firebase' => [
             'driver' => 'firebase',

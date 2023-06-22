@@ -154,7 +154,7 @@ function init() {
         }
     }
 
-    // variables globales para crear un nuevo diagrama de clase by Julico
+    // variables globales para crear un nuevo diagrama de clase
     var nombre = "Clase";
     var id = "id";
     var tipo_dato = "Llave primaria";
@@ -525,7 +525,7 @@ function init() {
                 formulario.append("idClase", keyClase);
                 formulario.append("NuevoNombre", newName);
 
-                console.log("Formulario para actualizar nombre de mis clases by julico");
+                console.log("Formulario para actualizar nombre de mis clases");
                 console.log(keyClase);
                 console.log(newName);
 

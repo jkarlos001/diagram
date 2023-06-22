@@ -50,7 +50,7 @@
             ;
         }
 
-        .grandeJulico {
+        .grandeJk {
             height: 700px;
             /* height: 100vh; */
             /* width: 100vw; */
@@ -90,7 +90,7 @@
                 <h2 class="text-2xl font-bold mb-4 border-b-2">Agregar Atributo</h2>
                 <div id="atributos" class="">
                     <div class="mb-4">
-                        {{-- datos para mi js by Julico --}}
+                        {{-- datos para mi js --}}
                         <input type="text" name="id_diagrama" id="id_diagrama" value="{{ $d->id }}"
                             class="hidden">
                         <input type="text" name="clases" id="clases" value="{{ $clases }}" class="hidden">
@@ -185,7 +185,7 @@
         </div>
         <div id="screnDIV" class="flex justify-center items-center">
             <div class="ancho bg-gray-100 p-4 rounded-md border-black my-4">
-                <div id="myDiagramDiv" class="p-4 w-full grandeJulico"></div>
+                <div id="myDiagramDiv" class="p-4 w-full grandeJk"></div>
             </div>
         </div>
     </div>
