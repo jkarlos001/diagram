@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
-    <title>Software 1 - JCST</title>
+    <title>Diagrama</title>
     {{-- para mis diagramas --}}
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.css"> --}}
     {{-- segundo diagramador mxgraph --}}
