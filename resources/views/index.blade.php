@@ -96,7 +96,7 @@
                 <img src="{{ asset('assets/img/default.png') }}"
                     class="inline h-full max-w-full transition-all duration-200 ease-nav-brand max-h-8"
                     alt="main_logo" />
-                <span class="ml-1 font-semibold transition-all duration-200 ease-nav-brand">E-commerce Foto</span>
+                <span class="ml-1 font-semibold transition-all duration-200 ease-nav-brand">Diagrama</span>
             </a>
         </div>
 
