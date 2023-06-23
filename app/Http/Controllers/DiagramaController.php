@@ -172,7 +172,7 @@ class DiagramaController extends Controller
                 if($c['id_diagrama'] == $d->id){
                     $cl[] = $c;
                 }
-                }
+             }
            }
 
         return view('VistaDiagramas.dojs', compact('d', 'tipod', 'clases','cl', 'a', 'r', 'relaciones'));
