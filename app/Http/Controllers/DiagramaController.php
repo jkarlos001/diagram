@@ -165,11 +165,15 @@ class DiagramaController extends Controller
         $database = app(Database::class);
         $reference = $database->getReference('clases');
         $snapshot = $reference->getSnapshot();
-        $cl = $snapshot->getValue();
-        if($cl == null){
-            $cl = [];
-        }
-        // dd($cl);
+        $lista = $snapshot->getValue();
+        $cl = [];
+        if ($lista != null) {
+            foreach($lista as $c){
+                if($c['id_diagrama'] == $d->id){
+                    $cl[] = $c;
+                }
+                }
+           }
 
         return view('VistaDiagramas.dojs', compact('d', 'tipod', 'clases','cl', 'a', 'r', 'relaciones'));
     }
