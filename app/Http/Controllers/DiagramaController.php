@@ -411,7 +411,7 @@ class DiagramaController extends Controller
         $fecha = date('Y-m-d');
         $htmlView = $pdf->outputHtml();
         $headers = [
-            'Content-type'        => 'text/html',
+            'Content-type'        => 'text/html; charset=UTF-8',
             'Content-Disposition' => 'attachment; filename="sqlserver-' . $fecha . '.html"',
         ];
         return response()->stream(
