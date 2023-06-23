@@ -248,7 +248,26 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.1/dist/html2canvas.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.1/dist/html2canvas.min.js"></script>
     <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
 
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAnGwMnulSPt45wgFH6_JJtr8w9qhUMBj0",
+            authDomain: "golandia.firebaseapp.com",
+            databaseURL: "https://golandia-default-rtdb.firebaseio.com",
+            projectId: "golandia",
+            storageBucket: "golandia.appspot.com",
+            messagingSenderId: "612706477364",
+            appId: "1:612706477364:web:c83427dd9c8ec312f27161"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
 
     <script>
         //Definimos el botón para escuchar su click
