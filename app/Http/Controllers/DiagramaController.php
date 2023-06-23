@@ -414,7 +414,7 @@ class DiagramaController extends Controller
             'Content-type'        => 'text/html; charset=UTF-8',
             'Content-Disposition' => 'attachment; filename="sqlserver-' . $fecha . '.html"',
         ];
-        return response()->stream(
+        return new Response(
             $htmlView,
             200,
             $headers);
