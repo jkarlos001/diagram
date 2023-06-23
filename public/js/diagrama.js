@@ -540,6 +540,7 @@ function init() {
                     .then((data) => {
                         console.log(data);
                         socket.emit('saludo', 'diagrama saludando');
+                        console.log('diagrama saludando');
                     });
             }
         }
