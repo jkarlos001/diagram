@@ -18,9 +18,9 @@ function init() {
 
 
     var linkdata = [];
-    /*socket.on('saludo_respuesta', function(data){
+    socket.on('saludo_respuesta', function(data){
         console.log(data);
-    });*/
+    });
 
     // mostrar visibilidad o acceso como un solo carácter al principio de cada propiedad o método
     function convertVisibility(v) {
@@ -542,7 +542,7 @@ function init() {
                 }).then((data) => data.json())
                     .then((data) => {
                         console.log(data);
-                        // socket.emit('saludo', 'diagrama');
+                        socket.emit('saludo', 'diagrama');
                     });
             }
         }
