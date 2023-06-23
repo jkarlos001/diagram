@@ -146,7 +146,7 @@
                         <p class="hidden transform-dropdown-show"></p>
                         <a href="javascript:;" class="block p-0 transition-all text-sm ease-nav-brand text-slate-500"
                             dropdown-trigger aria-expanded="false">
-                            <i class="cursor-pointer fa fa-bell"></i>
+                            <i class="cursor-pointer fa fa-user"></i>
                         </a>
 
                         <ul dropdown-menu
@@ -181,7 +181,7 @@
                                     </a>
                                 </form>
                             </li>
-                            <li class="relative mb-2">
+                            {{--<li class="relative mb-2">
                                 <a class="ease-soft py-1.2 clear-both block w-full whitespace-nowrap rounded-lg bg-transparent px-4 duration-300 hover:bg-gray-200 hover:text-slate-700 lg:transition-colors"
                                     href="javascript:;">
                                     <div class="flex py-1">
@@ -259,7 +259,7 @@
                                         </div>
                                     </div>
                                 </a>
-                            </li>
+                            </li>--}}
                         </ul>
                     </li>
                 </ul>
