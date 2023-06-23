@@ -19,9 +19,6 @@ function init() {
 
 
     var linkdata = [];
-    socket.on('saludo_respuesta', function(data){
-        console.log(data);
-    });
 
     // mostrar visibilidad o acceso como un solo carácter al principio de cada propiedad o método
     function convertVisibility(v) {
@@ -543,7 +540,7 @@ function init() {
                 }).then((data) => data.json())
                     .then((data) => {
                         console.log(data);
-                        socket.emit('saludo', 'diagrama');
+                        socket.emit('saludo', 'diagrama saludando');
                     });
             }
         }
@@ -724,6 +721,11 @@ function init() {
     //     { from: 14, to: 13, relationship: "aggregation" },
     //     { from: 1, to: 14, relationship: "assotiation" }
     // ];
+
+
+    socket.on('saludo_respuesta', function(data){
+        console.log(data);
+    });
 
     myDiagram.model = new go.GraphLinksModel(
         {
