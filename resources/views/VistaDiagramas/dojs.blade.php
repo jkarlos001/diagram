@@ -186,6 +186,9 @@
             <a href="{{ route('sqlserver', $d->id) }}" target="_blank"
                class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar SQL
                 Server</a>
+            <a href="{{ route('sqlserverview', $d->id) }}" target="_blank"
+               class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar SQL
+                Server vista</a>
             <button id="btnCapturar" class="px-4 py-2 bg-blue-500 text-white rounded-md">Generar imagen</button>
         </div>
 
