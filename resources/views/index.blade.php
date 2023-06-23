@@ -146,7 +146,7 @@
                         <p class="hidden transform-dropdown-show"></p>
                         <a href="javascript:;" class="block p-0 transition-all text-sm ease-nav-brand text-slate-500"
                             dropdown-trigger aria-expanded="false">
-                            <i class="cursor-pointer fa fa-circle-info"></i>
+                            <i class="cursor-pointer fa fa-wrench"></i>
                         </a>
 
                         <ul dropdown-menu
