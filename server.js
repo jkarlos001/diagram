@@ -7,7 +7,7 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server, { cors: { origin: " *" } });
 
 io.on('connection', (socket) => {
-    console.log('Cliente Socket: ' + socket.id);
+    console.log('Cliente Socket: ');
 
     // recivimos el mensaje del cliente y mandamos la respuesta
     socket.on('saludo', (user_id) => {
