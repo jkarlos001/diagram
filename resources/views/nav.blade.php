@@ -121,7 +121,7 @@
 
         {{-- seccion de componentes solo puede ser visualizado por los devs xD --}}
 
-        @can('admin')
+        {{--@can('admin')
             <li class="w-full mt-4">
                 <h6 class="pl-6 ml-2 font-bold leading-tight uppercase text-xs opacity-100">Componentes Dev</h6>
             </li>
@@ -282,7 +282,7 @@
         @endcan
 
 
-        {{-- seccion de usuarios o clientes --}}
+        --}}{{-- seccion de usuarios o clientes --}}{{--
 
 
 
@@ -388,5 +388,5 @@
                     </a>
                 </li>
             </ul>
-        @endcan
+        @endcan--}}
 </div>
