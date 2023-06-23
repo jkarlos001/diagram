@@ -251,10 +251,6 @@
 
 
     <script>
-        $(function(){
-            let socket = io('http://appscore.ml:3000');
-        });
-        socket.on('connection');
         //Definimos el botón para escuchar su click
         const $boton = document.querySelector("#btnCapturar"), // El botón que desencadena
             // $objetivo = document.body; // A qué le tomamos la foto
