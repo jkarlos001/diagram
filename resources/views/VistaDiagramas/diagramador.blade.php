@@ -178,7 +178,7 @@
                 Server</a>
             {{-- <button id="screenDiagram" class="px-4 py-2 bg-blue-500 text-white rounded-md">
                 Exportar PNG</button> --}}
-            <a  class="px-4 py-2 bg-blue-500 text-white rounded-md" id="btnCapturar">Generar imagen</a>
+            <button id="btnCapturar" class="px-4 py-2 bg-blue-500 text-white rounded-md">Generar imagen</button>
         </div>
         <div id="screnDIV" class="flex justify-center items-center ">
             <div class="w-4/5 bg-white p-4 rounded-md border-black ">
