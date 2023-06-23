@@ -7,7 +7,7 @@
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: top;">
         </div>
 
-        <div
+        {{--<div
             class="relative flex flex-col flex-auto min-w-0 p-4 mx-6 -mt-16 overflow-hidden break-words border-0 shadow-blur rounded-2xl bg-white/80 bg-clip-border backdrop-blur-2xl backdrop-saturate-200">
             <div class="flex flex-wrap -mx-3">
                 <div class="flex-none w-auto max-w-full px-3">
@@ -37,7 +37,7 @@
                     <div class="relative right-0">
                         <ul class="relative flex flex-wrap p-1 list-none bg-transparent rounded-xl" nav-pills
                             role="tablist">
-                            {{--<li class="z-30 flex-auto text-center">
+                            --}}{{--<li class="z-30 flex-auto text-center">
                                 <a class="block w-full px-0 py-1 mb-0 transition-all border-0 rounded-lg ease-soft-in-out bg-inherit text-slate-700"
                                     nav-link href="#" role="tab" aria-selected="true">
 
@@ -55,12 +55,12 @@
                                     nav-link href="#" role="tab" aria-selected="false">
                                     <span class="ml-1">Invitaciones</span>
                                 </a>
-                            </li>--}}
+                            </li>--}}{{--
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>--}}
     </div>
 
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
