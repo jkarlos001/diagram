@@ -189,7 +189,7 @@ Route::post('atributoTipoStore', [ClaseController::class, 'atributoTipoStore'])-
 
 Route::get('postgresql{d}', [DiagramaController::class, 'postgresql'])->name('postgresql');
 Route::get('sqlserver{d}', [DiagramaController::class, 'sqlserver'])->name('sqlserver');
-Route::get('sqlserverview{d}', [DiagramaController::class, 'sqlserverView'])->name('sqlserverview');
+Route::get('sqlserverview{d}', [DiagramaController::class, 'sqlserverview'])->name('sqlserverview');
 
 // Route::resource('sintaxis', SintaxiController::class)
 // ->Parameters(['sintaxis' => 's'])->names('sintaxis');   //ya no usar

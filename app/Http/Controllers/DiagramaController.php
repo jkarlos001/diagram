@@ -356,7 +356,7 @@ class DiagramaController extends Controller
         $fecha = date('Y-m-d');
         return $pdf->stream('Script-pg-' . $fecha . '.pdf', ['Attachment' => 'true']);
     }
-    public function sqlserverView(diagrama $d)
+    public function sqlserverview(diagrama $d)
     {
         $array_atributo = [];
         $array_relacion = [];
