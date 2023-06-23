@@ -243,10 +243,8 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.1/dist/html2canvas.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.1/dist/html2canvas.min.js"></script>
-    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
-    <script>
-        const socket = io('http://appscore.ml:3000');
-    </script>
+
+
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
@@ -267,7 +265,7 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
     </script>
-
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
     <script src="https://unpkg.com/gojs/release/go.js"></script>
     {{-- NO funciono
         <script src="{{ resource_path('js/modal.js') }}" async></script> --}}
