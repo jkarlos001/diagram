@@ -9,14 +9,14 @@
     <style>
     </style>
     <link rel="stylesheet" href="{{ resource_path('css/exportar.css') }}">
-    <title>Lista de Productos</title>
+    <title>Postgres</title>
 </head>
 
 <body>
     <div class="container mx-auto px-4">
         <div class="bg-white rounded-lg shadow-lg p-6">
             <div class="mb-4">
-                <h2 class="text-2xl font-bold">Script PostgreSQL by JCST</h2>
+                <h2 class="text-2xl font-bold">Creation script (Postgres)</h2>
             </div>
             <div class="mb-4">
                 {{-- <p class="text-lg font-mono">texto de prueba</p> --}}
@@ -62,7 +62,7 @@
                                 @break
 
                                 @default
-                                    <p class="text-lg ml-4 text-red-500">ERROR,</p>
+                                    <p class="text-lg ml-4 text-red-500">error,</p>
                             @endswitch
                         @endif
                         {{-- @endif --}}
@@ -70,7 +70,7 @@
                     <p class="text-lg mt-0 mb-10">};</p>
                     @empty
 
-                        <p class="text-lg">ERROR</p>
+                        <p class="text-lg">error</p>
                     @endforelse
 
                 </div>

@@ -9,14 +9,14 @@
     <style>
     </style>
     <link rel="stylesheet" href="{{ resource_path('css/exportar.css') }}">
-    <title>2do Parcial SW</title>
+    <title>SQL Server</title>
 </head>
 
 <body>
     <div class="container mx-auto px-4">
         <div class="bg-white rounded-lg shadow-lg p-6">
             <div class="mb-4">
-                <h2 class="text-2xl font-bold">Script SQL Server by JCST</h2>
+                <h3 class="text-2xl font-bold">Creation script (SQL SERVER)</h3>
             </div>
             <div class="mb-4">
                 {{-- <p class="text-lg font-mono">texto de prueba</p> --}}
@@ -65,7 +65,7 @@
                                 @break
 
                                 @default
-                                    <p class="text-lg ml-4 text-red-500">ERROR,</p>
+                                    <p class="text-lg ml-4 text-red-500">error,</p>
                             @endswitch
                         @endif
                         {{-- @endif --}}
@@ -74,7 +74,7 @@
                     <p class="text-lg mt-0 mb-10">GO</p>
                     @empty
 
-                        <p class="text-lg">ERROR</p>
+                        <p class="text-lg">error</p>
                     @endforelse
 
                 </div>
