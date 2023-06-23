@@ -169,23 +169,21 @@
         <div class="container mx-auto p-4 text-center">
             <button id="addButton" class="px-4 py-2 bg-blue-500 text-white rounded-md">Agregar nuevo diagrama de
                 clase</button>
-
-            <a href="{{ route('postgresql', $d->id) }}" target="_blank"
-                class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar
-                PostgreSQL</a>
-            <a href="{{ route('sqlserver', $d->id) }}" target="_blank"
-                class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar SQL
-                Server</a>
-            {{-- <button id="screenDiagram" class="px-4 py-2 bg-blue-500 text-white rounded-md">
-                Exportar PNG</button> --}}
-            <button id="btnCapturar" class="px-4 py-2 bg-blue-500 text-white rounded-md">Generar imagen</button>
         </div>
         <div id="screnDIV" class="flex justify-center items-center ">
             <div class="w-4/5 bg-white p-4 rounded-md border-black ">
                 <div id="myDiagramDiv" class="p-4 w-full grande"></div>
             </div>
-            <p>quiero salir en la foto xD</p>
         </div>
+
+
+        <a href="{{ route('postgresql', $d->id) }}" target="_blank"
+           class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar
+            PostgreSQL</a>
+        <a href="{{ route('sqlserver', $d->id) }}" target="_blank"
+           class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar SQL
+            Server</a>
+        <button id="btnCapturar" class="px-4 py-2 bg-blue-500 text-white rounded-md">Generar imagen</button>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
