@@ -1,9 +1,5 @@
 function init() {
     const $ = go.GraphObject.make;
-    const io = require("socket.io")({
-        serveClient: false
-    });
-    socket = io('http://appscore.ml:3000');
     socket.on('connection');
     myDiagram =
         $(go.Diagram, "myDiagramDiv",
