@@ -197,10 +197,6 @@
     {{-- @vite(['resources/js/modal.js']) --}}
     <!-- Agrega los scripts necesarios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://unpkg.com/gojs/release/go.js"></script>
-    {{-- NO funciono
-        <script src="{{ resource_path('js/modal.js') }}" async></script> --}}
-    <script src="./js/diagrama.js" async></script>
 
     {{-- <script>
         const sintaxisSelect = document.getElementById('sintaxis');
@@ -271,6 +267,11 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
     </script>
+
+    <script src="https://unpkg.com/gojs/release/go.js"></script>
+    {{-- NO funciono
+        <script src="{{ resource_path('js/modal.js') }}" async></script> --}}
+    <script src="./js/diagrama.js" async></script>
 
     <script>
         //Definimos el botón para escuchar su click
