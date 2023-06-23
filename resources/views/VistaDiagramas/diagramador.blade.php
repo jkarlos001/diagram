@@ -177,13 +177,15 @@
         </div>
 
 
-        <a href="{{ route('postgresql', $d->id) }}" target="_blank"
-           class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar
-            PostgreSQL</a>
-        <a href="{{ route('sqlserver', $d->id) }}" target="_blank"
-           class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar SQL
-            Server</a>
-        <button id="btnCapturar" class="px-4 py-2 bg-blue-500 text-white rounded-md">Generar imagen</button>
+        <div class="container mx-auto pt-4 text-center">
+            <a href="{{ route('postgresql', $d->id) }}" target="_blank"
+               class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar
+                PostgreSQL</a>
+            <a href="{{ route('sqlserver', $d->id) }}" target="_blank"
+               class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar SQL
+                Server</a>
+            <button id="btnCapturar" class="px-4 py-2 bg-blue-500 text-white rounded-md">Generar imagen</button>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

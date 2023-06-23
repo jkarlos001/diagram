@@ -172,16 +172,6 @@
         <div class="container mx-auto pt-4 text-center">
             <button id="addButton" class="px-4 py-2 bg-blue-500 text-white rounded-md">Agregar nuevo diagrama de
                 clase</button>
-
-            <a href="{{ route('postgresql', $d->id) }}" target="_blank"
-                class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar
-                PostgreSQL</a>
-            <a href="{{ route('sqlserver', $d->id) }}" target="_blank"
-                class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar SQL
-                Server</a>
-            {{-- <button id="screenDiagram" class="px-4 py-2 bg-blue-500 text-white rounded-md">
-                Exportar PNG</button> --}}
-            <button id="btnCapturar" class="px-4 py-2 bg-blue-500 text-white rounded-md">Generar imagen</button>
         </div>
         <div id="screnDIV" class="flex justify-center items-center">
             <div class="ancho bg-gray-100 p-4 rounded-md border-black my-4">
@@ -189,14 +179,16 @@
             </div>
         </div>
 
+        <div class="container mx-auto pt-4 text-center">
+            <a href="{{ route('postgresql', $d->id) }}" target="_blank"
+               class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar
+                PostgreSQL</a>
+            <a href="{{ route('sqlserver', $d->id) }}" target="_blank"
+               class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar SQL
+                Server</a>
+            <button id="btnCapturar" class="px-4 py-2 bg-blue-500 text-white rounded-md">Generar imagen</button>
+        </div>
 
-        <a href="{{ route('postgresql', $d->id) }}" target="_blank"
-           class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar
-            PostgreSQL</a>
-        <a href="{{ route('sqlserver', $d->id) }}" target="_blank"
-           class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar SQL
-            Server</a>
-        <button id="btnCapturar" class="px-4 py-2 bg-blue-500 text-white rounded-md">Generar imagen</button>
     </div>
 @endsection
 
