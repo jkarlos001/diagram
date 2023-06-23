@@ -18,6 +18,9 @@ function init() {
 
 
     var linkdata = [];
+    socket.on('saludo_respuesta', function(data){
+        console.log(data);
+    });
 
     // mostrar visibilidad o acceso como un solo carácter al principio de cada propiedad o método
     function convertVisibility(v) {
@@ -383,10 +386,10 @@ function init() {
                                     break;
                             }
                             //EJEMPLO { from: 12, to: 11, relationship: "generalization" }
-                            console.log("Tipo de la relacionar: ", relacionxd);
+                            // console.log("Tipo de la relacionar: ", relacionxd);
                             const newRelationship = { from: itemdata.key, to: SelectClaseRelacion, relationship: relacionxd };
                             list.push(newRelationship);
-                            console.log("Así quedó la relación: ", list);
+                            // console.log("Así quedó la relación: ", list);
 
                             // Crear el enlace en el diagrama
                             myDiagram.startTransaction("addRelationship");
@@ -539,6 +542,7 @@ function init() {
                 }).then((data) => data.json())
                     .then((data) => {
                         console.log(data);
+                        socket.emit('saludo', 'diagrama')
                     });
             }
         }
