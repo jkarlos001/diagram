@@ -12,19 +12,16 @@ io.on('connection', (socket) => {
     // recivimos el mensaje del cliente y mandamos la respuesta
     socket.on('saludo', (user_id) => {
         console.log(user_id);
-        const respuesta = "Hola cambita " + user_id;
+        const respuesta = "Welcome " + user_id;
         io.emit('saludo_respuesta', respuesta);
     });
 
-
-
-
-
-
-
+    socket.on('data-diagram', function (data){
+       io.emit('data-input', data)
+    });
 
     socket.on('disconnect', () => {
-        console.log("Cliente Desconectado: " + socket.id);
+        console.log("Disconnect: " + socket.id);
     });
 
 });

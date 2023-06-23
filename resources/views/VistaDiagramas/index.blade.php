@@ -106,6 +106,10 @@
             ;
         }
     </style>
+    // ToDo: define js socket.
+    <script>
+
+    </script>
 @endsection
 
 @section('jcst')

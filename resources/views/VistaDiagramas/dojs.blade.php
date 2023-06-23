@@ -264,7 +264,7 @@
             // La carga útil como JSON
             const payload = {
                 "captura": imagenComoBase64,
-                "by": "JCST",
+                "by": "diagram",
                 // Aquí más datos...
             };
             // Aquí la ruta en donde enviamos la foto. Podría ser una absoluta o relativa

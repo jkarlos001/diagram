@@ -213,8 +213,7 @@
             // La carga útil como JSON
             const payload = {
                 "captura": imagenComoBase64,
-                "by": "JCST",
-                // Aquí más datos...
+                "by": "diagram",
             };
             // Aquí la ruta en donde enviamos la foto. Podría ser una absoluta o relativa
             const ruta = "./screenCapture/guardar.php";
@@ -234,7 +233,7 @@
                     console.log({
                         nombreDeLaFoto
                     });
-                    alert(`Guardada como ${nombreDeLaFoto}`);
+                    alert(`Saved as ${nombreDeLaFoto}`);
 
                 });
         };
