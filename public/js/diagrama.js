@@ -540,7 +540,7 @@ function init() {
                 }).then((data) => data.json())
                     .then((data) => {
                         console.log(data);
-                        //socket.emit('saludo', 'diagrama saludando');
+                        socket.emit('saludo', 'diagrama saludando');
                     });
             }
         }
