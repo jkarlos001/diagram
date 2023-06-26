@@ -764,7 +764,7 @@ function init() {
         console.log(data.nodeKey);
         var nodeO = myDiagram.findNodeForKey(data.nodeKey);
         myDiagram.startTransaction("updateNodeName");
-        myDiagram.model.setDataProperty(nodeO, "name", data.name);
+        myDiagram.model.setDataProperty(nodeO.data, "name", data.name);
         myDiagram.commitTransaction("updateNodeName");
         console.log("nameClassClient");
     });
