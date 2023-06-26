@@ -759,10 +759,11 @@ function init() {
     }*/
 
     socket.on('addRelationClient', function (data) {
-        list.push(data);
+        //list.push(data);
         myDiagram.startTransaction("addRelationship");
         myDiagram.model.addLinkData(data);
         myDiagram.commitTransaction("addRelationship");
+        console.log("addRelationClient");
     });
 
     socket.on('addClassClient', function(data){
