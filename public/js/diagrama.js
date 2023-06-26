@@ -451,8 +451,15 @@ function init() {
             )
         );
 
-    let bt_cerrar_modal2 = document.getElementById('bt_cerrar_modal2');
-    bt_cerrar_modal2.addEventListener('click', e => {
+    let bt_cerrar_modal_1 = document.getElementById('bt_cerrar_modal_atributo');
+    bt_cerrar_modal_1.addEventListener('click', e => {
+        //prevenir el evento que viene por default
+        e.preventDefault();
+        console.warn('entre al modal de atributos!');
+        document.getElementById('myModal').close();
+    });
+    let bt_cerrar_modal_2 = document.getElementById('bt_cerrar_modal_relacion');
+    bt_cerrar_modal_2.addEventListener('click', e => {
         //prevenir el evento que viene por default
         e.preventDefault();
         console.warn('entre al modal de relaciones!');
@@ -466,6 +473,28 @@ function init() {
         var selection = e.subject; // Elementos seleccionados eliminados
         console.log("Me parece que quieres eliminar una relacion", selection);
         selection.each(function (part) {
+            if (part instanceof go.Node) {
+                var node1 = part; // Obtener la clase eliminada
+                var nodeData2 = node1.data;
+                console.log("ID de la clase a eliminar:", nodeData2["key"]);
+
+                // FORMULARIO PARA ELIMINAR CLASES
+                let token = document.querySelector('meta[name="csrf-token"]')
+                    .getAttribute("content");
+                let formulario = new FormData();
+                formulario.append("clase_id", nodeData2["key"]);
+                fetch('/claseDestroy', {
+                    headers: {
+                        "X-CSRF-TOKEN": token,
+                    },
+                    method: 'POST',
+                    body: formulario
+                }).then((data) => data.json())
+                    .then((data) => {
+                        console.log(data);
+                    });
+            }
+
             if (part instanceof go.Link) {
                 var link = part; // Obtener la relación eliminada
                 var linkData = link.data;
