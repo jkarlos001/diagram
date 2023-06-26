@@ -177,6 +177,10 @@ function init() {
         // console.log("clase name: ", newClassDiagram.name);
         // Agrega el nuevo objeto nodedata al arreglo nodeDataArray del modelo del diagrama
         myDiagram.model.addNodeData(newClassDiagram);
+
+        // generate evento to socketio.
+        // evento de creación de ClassDiagram
+        socket.emit('addClass',newClassDiagram);
     }
 
     // Agrega un evento click al botón en tu vista Blade
@@ -723,7 +727,12 @@ function init() {
     // ];
 
 
-    socket.on('saludo_respuesta', function(data){
+/*    function syncAddNewClassDiagram(data) {
+        myDiagram.model.addNodeData(data);
+    }*/
+
+    socket.on('addClassClient', function(data){
+        myDiagram.model.addNodeData(data);
         console.log(data);
     });
 
