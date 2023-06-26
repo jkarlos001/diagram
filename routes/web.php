@@ -169,9 +169,9 @@ Route::resource('formato', FormatoController::class)
 Route::resource('clase', ClaseController::class)
     ->Parameters(['clase' => 'c'])->names('clase')->except(['store','update']);
 
+Route::post('relacionDestroy', [ClaseController::class, 'relacionDestroy'])->name('relacionDestroy');
 Route::post('relacionStore', [ClaseController::class, 'relacionStore'])->name('relacionStore');
 Route::post('relacionUpdate', [ClaseController::class, 'relacionUpdate'])->name('relacionUpdate');
-Route::post('relacionDestroy', [ClaseController::class, 'relacionDestroy'])->name('relacionDestroy');
 Route::post('claseDestroy', [ClaseController::class, 'claseDestroy'])->name('claseDestroy');
 Route::post('claseStore', [ClaseController::class, 'store'])->name('claseStore');
 Route::post('claseUpdate', [ClaseController::class, 'update'])->name('clase.update');
