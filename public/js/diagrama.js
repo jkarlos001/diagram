@@ -556,7 +556,10 @@ function init() {
                 let formulario = new FormData();
                 formulario.append("idClase", keyClase);
                 formulario.append("NuevoNombre", newName);
-
+                var data = {
+                    node: node.data,
+                    name: newName
+                };
                 console.log("Formulario para actualizar nombre de mis clases");
                 console.log(keyClase);
                 console.log(newName);
@@ -571,7 +574,7 @@ function init() {
                 }).then((data) => data.json())
                     .then((data) => {
                         console.log(data);
-                        socket.emit('saludo', 'diagrama saludando');
+                        socket.emit('nameClass', data);
                     });
             }
         }
@@ -757,6 +760,13 @@ function init() {
 /*    function syncAddNewClassDiagram(data) {
         myDiagram.model.addNodeData(data);
     }*/
+
+    socket.on('nameClassClient', function (data) {
+        myDiagram.startTransaction("updateNodeName");
+        myDiagram.model.setDataProperty(data.node, "name", data.name);
+        myDiagram.commitTransaction("updateNodeName");
+        console.log("nameClassClient");
+    });
 
     socket.on('addRelationClient', function (data) {
         //list.push(data);

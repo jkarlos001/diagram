@@ -35,6 +35,10 @@ io.on('connection', (socket) => {
         io.emit('addRelationClient', data)
     })
 
+    socket.on('nameClass', function (data) {
+        io.emit('nameClassClient', data)
+    })
+
     socket.on('disconnect', () => {
         console.log("Disconnect: " + socket.id);
     });
