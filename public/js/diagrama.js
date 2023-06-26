@@ -556,15 +556,12 @@ function init() {
                 let formulario = new FormData();
                 formulario.append("idClase", keyClase);
                 formulario.append("NuevoNombre", newName);
-                var data = {
+                var dataC = {
                     node: node.data,
                     name: newName
                 };
-                console.log("Formulario para actualizar nombre de mis clases");
-                console.log(keyClase);
-                console.log(newName);
-
-                socket.emit('nameClass', data);
+                console.log("Socket.io change name class.");
+                socket.emit('nameClass', dataC);
                 // La ruta debe ser de tipo navegador con una barra diagonal al inicio
                 fetch('/claseUpdate', {
                     headers: {
@@ -762,6 +759,7 @@ function init() {
     }*/
 
     socket.on('nameClassClient', function (data) {
+        console.log("nameClassClient receiving data");
         myDiagram.startTransaction("updateNodeName");
         myDiagram.model.setDataProperty(data.node, "name", data.name);
         myDiagram.commitTransaction("updateNodeName");
