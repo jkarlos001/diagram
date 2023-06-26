@@ -733,6 +733,7 @@ function init() {
 
     socket.on('addClassClient', function(data){
         myDiagram.model.addNodeData(data);
+        console.log("addClassClient");
         console.log(data);
     });
 
