@@ -131,6 +131,39 @@ class ClaseController extends Controller
         return view('VistaDiagramas.atributos');
     }
 
+    public function claseDestroy(Request $r)
+    {
+
+        $clase = clase::where('id', '=', $r->clase_id)->first();
+        // $clase->delete();
+
+        $array = [];
+        $database = app(Database::class);
+        $reference = $database->getReference('clases');
+        $snapshot = $reference->getSnapshot();
+        $lista = $snapshot->getValue();
+        if ($lista != null) {
+            foreach ($lista as $key => $value) {
+                if ($value['id'] == $r->clase_id) {
+                    unset($lista[$key]); // Eliminar el elemento del array
+                    break;
+                }
+            }
+            // Actualizar el nodo "clases" con el nuevo array
+            $reference->set($lista);
+        }
+
+        if ($clase) {
+            return response()->json([
+                'success' => true,
+                'message' => 'Clase Eliminada correctamente',
+                'array' => $array,
+            ]);
+        }
+
+        return response()->json('Error al Eliminar la clase');
+    }
+
     public function atributoStore(Request $request)
     {
 

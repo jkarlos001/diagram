@@ -301,6 +301,8 @@ class DiagramaController extends Controller
         return $pdf->stream('Script-pg-' . $fecha . '.pdf', ['Attachment' => 'true']);
     }
 
+
+
     public function sqlserver(diagrama $d)
     {
         $array_atributo = [];

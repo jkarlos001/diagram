@@ -172,6 +172,7 @@ Route::resource('clase', ClaseController::class)
 Route::post('relacionStore', [ClaseController::class, 'relacionStore'])->name('relacionStore');
 Route::post('relacionUpdate', [ClaseController::class, 'relacionUpdate'])->name('relacionUpdate');
 Route::post('relacionDestroy', [ClaseController::class, 'relacionDestroy'])->name('relacionDestroy');
+Route::post('claseDestroy', [ClaseController::class, 'claseDestroy'])->name('claseDestroy');
 Route::post('claseStore', [ClaseController::class, 'store'])->name('claseStore');
 Route::post('claseUpdate', [ClaseController::class, 'update'])->name('clase.update');
 
@@ -185,7 +186,6 @@ Route::get('atributos', [ClaseController::class, 'atributos'])->name('atributos'
 Route::post('atributoStore', [ClaseController::class, 'atributoStore'])->name('atributoStore');
 Route::get('atributoTipo', [ClaseController::class, 'atributoTipo'])->name('atributoTipo');
 Route::post('atributoTipoStore', [ClaseController::class, 'atributoTipoStore'])->name('atributoTipoStore');
-
 
 Route::get('postgresql{d}', [DiagramaController::class, 'postgresql'])->name('postgresql');
 Route::get('sqlserverview{d}', [DiagramaController::class, 'sqlserverview'])->name('sqlserverview');

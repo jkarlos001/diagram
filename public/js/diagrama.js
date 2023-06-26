@@ -458,7 +458,7 @@ function init() {
         console.warn('entre al modal de atributos!');
         document.getElementById('myModal').close();
     });*/
-    let bt_cerrar_modal_2 = document.getElementById('bt_cerrar_modal_relacion');
+    let bt_cerrar_modal_2 = document.getElementById('bt_cerrar_modal2');
     bt_cerrar_modal_2.addEventListener('click', e => {
         //prevenir el evento que viene por default
         e.preventDefault();
@@ -473,7 +473,7 @@ function init() {
         var selection = e.subject; // Elementos seleccionados eliminados
         console.log("Me parece que quieres eliminar una relacion", selection);
         selection.each(function (part) {
-            /*if (part instanceof go.Node) {
+            if (part instanceof go.Node) {
                 var node1 = part; // Obtener la clase eliminada
                 var nodeData2 = node1.data;
                 console.log("ID de la clase a eliminar:", nodeData2["key"]);
@@ -493,7 +493,7 @@ function init() {
                     .then((data) => {
                         console.log(data);
                     });
-            }*/
+            }
 
             if (part instanceof go.Link) {
                 var link = part; // Obtener la relación eliminada
