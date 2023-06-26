@@ -183,6 +183,8 @@
             <a href="{{ route('postgresql', $d->id) }}" target="_blank"
                class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar
                 PostgreSQL</a>
+            <a href="{{ route('postgresqlview', $d->id) }}" target="_blank"
+               class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar Postgres vista</a>
             <a href="{{ route('sqlserver', $d->id) }}" target="_blank"
                class="px-4 py-2 bg-blue-500 text-white rounded-md">Exportar SQL
                 Server</a>
