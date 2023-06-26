@@ -135,9 +135,9 @@ class ClaseController extends Controller
     {
 
         $clase = clase::where('id', '=', $r->clase_id)->first();
-        // $clase->delete();
+        $clase->delete();
 
-        $array = [];
+        /*$array = [];
         $database = app(Database::class);
         $reference = $database->getReference('clases');
         $snapshot = $reference->getSnapshot();
@@ -151,7 +151,7 @@ class ClaseController extends Controller
             }
             // Actualizar el nodo "clases" con el nuevo array
             $reference->set($lista);
-        }
+        }*/
 
         if ($clase) {
             return response()->json([
