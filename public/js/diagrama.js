@@ -561,6 +561,7 @@ function init() {
                     name: newName
                 };
                 console.log("Socket.io change name class.");
+                console.log(node.data);
                 socket.emit('nameClass', dataC);
                 // La ruta debe ser de tipo navegador con una barra diagonal al inicio
                 fetch('/claseUpdate', {
@@ -760,6 +761,7 @@ function init() {
 
     socket.on('nameClassClient', function (data) {
         console.log("nameClassClient receiving data");
+        console.log(data.node);
         myDiagram.startTransaction("updateNodeName");
         myDiagram.model.setDataProperty(data.node, "name", data.name);
         myDiagram.commitTransaction("updateNodeName");
