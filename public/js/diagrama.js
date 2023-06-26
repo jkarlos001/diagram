@@ -761,11 +761,10 @@ function init() {
 
     socket.on('nameClassClient', function (data) {
         console.log("nameClassClient receiving data");
-        console.log(data.node);
-
+        console.log(data.nodeKey);
+        var nodeO = myDiagram.findNodeForKey(data.nodeKey);
         myDiagram.startTransaction("updateNodeName");
-        var objNode = myDiagram.getObject(data.nodeKey);
-        myDiagram.model.setDataProperty(objNode, "name", data.name);
+        myDiagram.model.setDataProperty(nodeO, "name", data.name);
         myDiagram.commitTransaction("updateNodeName");
         console.log("nameClassClient");
     });
