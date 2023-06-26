@@ -173,9 +173,6 @@ function init() {
         };
         guardarClase(newClassDiagram);
 
-        // console.log("clase id: ", newClassDiagram.key);
-        // console.log("clase name: ", newClassDiagram.name);
-        // Agrega el nuevo objeto nodedata al arreglo nodeDataArray del modelo del diagrama
         myDiagram.model.addNodeData(newClassDiagram);
 
         // generate evento to socketio.
