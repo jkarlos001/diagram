@@ -27,6 +27,10 @@ io.on('connection', (socket) => {
        io.emit('data-input', data)
     });
 
+    socket.on('addClass', function (data){
+        io.emit('addClassClient', data)
+     });
+
     socket.on('disconnect', () => {
         console.log("Disconnect: " + socket.id);
     });
