@@ -564,6 +564,7 @@ function init() {
                 console.log(keyClase);
                 console.log(newName);
 
+                socket.emit('nameClass', data);
                 // La ruta debe ser de tipo navegador con una barra diagonal al inicio
                 fetch('/claseUpdate', {
                     headers: {
@@ -574,7 +575,6 @@ function init() {
                 }).then((data) => data.json())
                     .then((data) => {
                         console.log(data);
-                        socket.emit('nameClass', data);
                     });
             }
         }
