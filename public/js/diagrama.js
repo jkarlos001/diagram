@@ -417,6 +417,7 @@ function init() {
                             }).then((data) => data.json())
                                 .then((data) => {
                                     console.log(data);
+                                    socket.emit('addRelation', newRelationship);
                                 });
 
 
@@ -756,6 +757,13 @@ function init() {
 /*    function syncAddNewClassDiagram(data) {
         myDiagram.model.addNodeData(data);
     }*/
+
+    socket.on('addRelationClient', function (data) {
+        list.push(data);
+        myDiagram.startTransaction("addRelationship");
+        myDiagram.model.addLinkData(data);
+        myDiagram.commitTransaction("addRelationship");
+    });
 
     socket.on('addClassClient', function(data){
         myDiagram.model.addNodeData(data);

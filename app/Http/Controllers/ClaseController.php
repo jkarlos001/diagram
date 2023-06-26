@@ -157,7 +157,6 @@ class ClaseController extends Controller
             return response()->json([
                 'success' => true,
                 'message' => 'Clase Eliminada correctamente',
-                'array' => $array,
             ]);
         }
 
