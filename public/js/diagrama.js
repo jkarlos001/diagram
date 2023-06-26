@@ -557,7 +557,7 @@ function init() {
                 formulario.append("idClase", keyClase);
                 formulario.append("NuevoNombre", newName);
                 var dataC = {
-                    node: node.data,
+                    nodeKey: node.key,
                     name: newName
                 };
                 console.log("Socket.io change name class.");
@@ -762,8 +762,10 @@ function init() {
     socket.on('nameClassClient', function (data) {
         console.log("nameClassClient receiving data");
         console.log(data.node);
+
         myDiagram.startTransaction("updateNodeName");
-        myDiagram.model.setDataProperty(data.node, "name", data.name);
+        var objNode = myDiagram.getObject(data.nodeKey);
+        myDiagram.model.setDataProperty(objNode, "name", data.name);
         myDiagram.commitTransaction("updateNodeName");
         console.log("nameClassClient");
     });
