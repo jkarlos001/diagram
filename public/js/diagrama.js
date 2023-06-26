@@ -451,13 +451,13 @@ function init() {
             )
         );
 
-    let bt_cerrar_modal_1 = document.getElementById('bt_cerrar_modal_atributo');
+    /*let bt_cerrar_modal_1 = document.getElementById('bt_cerrar_modal_atributo');
     bt_cerrar_modal_1.addEventListener('click', e => {
         //prevenir el evento que viene por default
         e.preventDefault();
         console.warn('entre al modal de atributos!');
         document.getElementById('myModal').close();
-    });
+    });*/
     let bt_cerrar_modal_2 = document.getElementById('bt_cerrar_modal_relacion');
     bt_cerrar_modal_2.addEventListener('click', e => {
         //prevenir el evento que viene por default
